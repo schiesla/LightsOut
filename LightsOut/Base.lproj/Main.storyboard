@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,18 +15,57 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LightsOut" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Pz-Tm-Q5L">
-                                <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="D7s-BY-NBS"/>
                                     <barButtonItem title="New Game" id="PJG-SA-rOG"/>
                                 </items>
                             </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dm6-kG-P0Z">
+                                <rect key="frame" x="82" y="188" width="250" height="380"/>
+                                <color key="backgroundColor" red="0.59092850890000004" green="1" blue="0.68657609190000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Jm8-l3-kMe"/>
+                                    <constraint firstAttribute="height" constant="380" id="cih-CN-Gg6"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Jm8-l3-kMe"/>
+                                        <exclude reference="cih-CN-Gg6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Jm8-l3-kMe"/>
+                                        <include reference="cih-CN-Gg6"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GameState" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ0-Gh-kEB">
+                                <rect key="frame" x="82" y="153.66666666666666" width="250" height="26.333333333333343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="c0x-3q-b2N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="c0x-3q-b2N"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="c0x-3q-b2N"/>
+                                    </mask>
+                                </variation>
+                            </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QTb-Bg-Jhc">
-                                <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="YPS-vK-Drr">
                                         <barButtonItem key="leftBarButtonItem" title="New Game" id="hld-dp-ndZ" userLabel="New Game"/>
@@ -36,9 +75,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="mQ0-Gh-kEB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5Zi-Ib-9iZ"/>
+                            <constraint firstItem="Dm6-kG-P0Z" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="7se-PD-ITN"/>
+                            <constraint firstItem="Dm6-kG-P0Z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CBN-Vh-MWX"/>
                             <constraint firstItem="6Pz-Tm-Q5L" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Jrb-q9-ULG"/>
                             <constraint firstItem="QTb-Bg-Jhc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Nx0-5d-WMB"/>
                             <constraint firstItem="QTb-Bg-Jhc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OLZ-x6-NPp"/>
+                            <constraint firstItem="Dm6-kG-P0Z" firstAttribute="top" secondItem="mQ0-Gh-kEB" secondAttribute="bottom" constant="8" id="aYe-Gx-wHG"/>
                             <constraint firstItem="QTb-Bg-Jhc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nCT-IU-LtX"/>
                             <constraint firstItem="6Pz-Tm-Q5L" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qB1-ll-rUP"/>
                             <constraint firstItem="6Pz-Tm-Q5L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sYA-OM-83v"/>
@@ -47,12 +90,18 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="6Pz-Tm-Q5L"/>
+                                <exclude reference="Dm6-kG-P0Z"/>
+                                <exclude reference="mQ0-Gh-kEB"/>
                                 <exclude reference="QTb-Bg-Jhc"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Nx0-5d-WMB"/>
                                 <exclude reference="OLZ-x6-NPp"/>
                                 <exclude reference="nCT-IU-LtX"/>
+                                <exclude reference="7se-PD-ITN"/>
+                                <exclude reference="CBN-Vh-MWX"/>
+                                <exclude reference="aYe-Gx-wHG"/>
+                                <exclude reference="5Zi-Ib-9iZ"/>
                                 <exclude reference="Jrb-q9-ULG"/>
                                 <exclude reference="qB1-ll-rUP"/>
                                 <exclude reference="sYA-OM-83v"/>
@@ -61,8 +110,14 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="6Pz-Tm-Q5L"/>
+                                <include reference="Dm6-kG-P0Z"/>
+                                <include reference="mQ0-Gh-kEB"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="7se-PD-ITN"/>
+                                <include reference="CBN-Vh-MWX"/>
+                                <include reference="aYe-Gx-wHG"/>
+                                <include reference="5Zi-Ib-9iZ"/>
                                 <include reference="Jrb-q9-ULG"/>
                                 <include reference="qB1-ll-rUP"/>
                                 <include reference="sYA-OM-83v"/>
