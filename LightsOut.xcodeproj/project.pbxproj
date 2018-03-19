@@ -12,6 +12,10 @@
 		0AA49D9B2060314F0063C6BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA49D992060314F0063C6BA /* Main.storyboard */; };
 		0AA49D9D2060314F0063C6BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AA49D9C2060314F0063C6BA /* Assets.xcassets */; };
 		0AA49DA02060314F0063C6BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA49D9E2060314F0063C6BA /* LaunchScreen.storyboard */; };
+		0AA49DA920603DDC0063C6BA /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA49DA820603DDC0063C6BA /* Icon-60.png */; };
+		0AA49DAB20603DEC0063C6BA /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA49DAA20603DEC0063C6BA /* Icon-72.png */; };
+		0AA49DAD20603DF90063C6BA /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA49DAC20603DF90063C6BA /* Icon-72@2x.png */; };
+		0AA49DAF20603E000063C6BA /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA49DAE20603E000063C6BA /* Icon-Small-50.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,14 @@
 		0AA49D9C2060314F0063C6BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AA49D9F2060314F0063C6BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AA49DA12060314F0063C6BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AA49DA820603DDC0063C6BA /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		0AA49DAA20603DEC0063C6BA /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		0AA49DAC20603DF90063C6BA /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		0AA49DAE20603E000063C6BA /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		0AA49DB320603E320063C6BA /* iconBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconBig.png; sourceTree = "<group>"; };
+		0AA49DB420603E320063C6BA /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		0AA49DB520603E330063C6BA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		0AA49DB820603E330063C6BA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 		0AA49D942060314F0063C6BA /* LightsOut */ = {
 			isa = PBXGroup;
 			children = (
+				0AA49DA720603DC60063C6BA /* Supporting */,
 				0AA49D952060314F0063C6BA /* AppDelegate.swift */,
 				0AA49D972060314F0063C6BA /* ViewController.swift */,
 				0AA49D992060314F0063C6BA /* Main.storyboard */,
@@ -62,6 +75,21 @@
 				0AA49DA12060314F0063C6BA /* Info.plist */,
 			);
 			path = LightsOut;
+			sourceTree = "<group>";
+		};
+		0AA49DA720603DC60063C6BA /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				0AA49DB420603E320063C6BA /* Icon-Small-50@2x.png */,
+				0AA49DB520603E330063C6BA /* Icon.png */,
+				0AA49DB820603E330063C6BA /* Icon@2x.png */,
+				0AA49DB320603E320063C6BA /* iconBig.png */,
+				0AA49DAE20603E000063C6BA /* Icon-Small-50.png */,
+				0AA49DAC20603DF90063C6BA /* Icon-72@2x.png */,
+				0AA49DAA20603DEC0063C6BA /* Icon-72.png */,
+				0AA49DA820603DDC0063C6BA /* Icon-60.png */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +152,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AA49DA02060314F0063C6BA /* LaunchScreen.storyboard in Resources */,
+				0AA49DAF20603E000063C6BA /* Icon-Small-50.png in Resources */,
+				0AA49DAB20603DEC0063C6BA /* Icon-72.png in Resources */,
+				0AA49DAD20603DF90063C6BA /* Icon-72@2x.png in Resources */,
 				0AA49D9D2060314F0063C6BA /* Assets.xcassets in Resources */,
+				0AA49DA920603DDC0063C6BA /* Icon-60.png in Resources */,
 				0AA49D9B2060314F0063C6BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
