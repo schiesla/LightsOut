@@ -16,6 +16,7 @@
 		0AA49DAB20603DEC0063C6BA /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA49DAA20603DEC0063C6BA /* Icon-72.png */; };
 		0AA49DAD20603DF90063C6BA /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA49DAC20603DF90063C6BA /* Icon-72@2x.png */; };
 		0AA49DAF20603E000063C6BA /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA49DAE20603E000063C6BA /* Icon-Small-50.png */; };
+		0AA49DBC206049C40063C6BA /* LightsOutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA49DBB206049C40063C6BA /* LightsOutGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		0AA49DB420603E320063C6BA /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
 		0AA49DB520603E330063C6BA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		0AA49DB820603E330063C6BA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		0AA49DBB206049C40063C6BA /* LightsOutGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsOutGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				0AA49D952060314F0063C6BA /* AppDelegate.swift */,
 				0AA49D972060314F0063C6BA /* ViewController.swift */,
 				0AA49D992060314F0063C6BA /* Main.storyboard */,
+				0AA49DBB206049C40063C6BA /* LightsOutGame.swift */,
 				0AA49D9C2060314F0063C6BA /* Assets.xcassets */,
 				0AA49D9E2060314F0063C6BA /* LaunchScreen.storyboard */,
 				0AA49DA12060314F0063C6BA /* Info.plist */,
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AA49D982060314F0063C6BA /* ViewController.swift in Sources */,
+				0AA49DBC206049C40063C6BA /* LightsOutGame.swift in Sources */,
 				0AA49D962060314F0063C6BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
