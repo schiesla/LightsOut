@@ -11,27 +11,33 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var gameStateLabel: UILabel!
+    @IBOutlet var gameButtons: [UIButton]!
     @IBOutlet weak var gameStateNavBar: UINavigationBar!
     
     var game = LinearLightsOutGame(numLights: 13)
     
     @IBAction func pressedNewGame(_ sender: Any) {
         print("new game")
-//        print(gameButtons.first)
         game = LinearLightsOutGame(numLights: 13)
-        gameStateLabel.text = "0"
+        gameStateLabel.text = String(game.moves)
+        gameStateNavBar.topItem?.title = String(game.moves)
         updateView(game.checkForGameOver())
     }
     
     @IBAction func pressedGameButton(_ sender: Any) {
-        let gameBoardButton = sender as! UIButton
-        print(gameBoardButton.tag);
-        updateView(game.pressedLightAtIndex(gameBoardButton.tag))
+        if (game.gameState == .win) {
+            return
+        } else {
+            let gameBoardButton = sender as! UIButton
+            print(gameBoardButton.tag);
+            updateView(game.pressedLightAtIndex(gameBoardButton.tag))
+        }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        gameStateLabel.text = String(game.moves)
+        gameStateNavBar.topItem?.title = String(game.moves)
         updateView(game.checkForGameOver())
     }
 
@@ -41,17 +47,20 @@ class ViewController: UIViewController {
         print(game.lightStates)
         for i in 0..<game.lightStates.count {
             var button: UIButton
-            if (traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.compact) {
-                button = gameButtons[i]
-            } else {
-                button = gameButtons[i + 13]
-            }
+            button = gameButtons[i]
             switch(game.lightStates[i]) {
             case true:
                 button.setImage(onImage, for: UIControlState.normal)
             case false:
                 button.setImage(offImage, for: UIControlState.normal)
             }
+        }
+        if (game.gameState == .win) {
+            gameStateLabel.text = "You Win"
+            gameStateNavBar.topItem?.title = "You Win"
+        } else {
+            gameStateLabel.text = String(game.moves)
+            gameStateNavBar.topItem?.title = String(game.moves)
         }
     }
 
