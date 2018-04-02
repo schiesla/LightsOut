@@ -63,8 +63,8 @@ class ViewController: UIViewController {
             gameStateLabel.text = "You Win, Moves: " + String(game.movesTaken)
             gameStateNavBar.topItem?.title = "You Win, Moves: " + String(game.movesTaken)
         } else {
-            gameStateLabel.text = String(game.movesTaken)
-            gameStateNavBar.topItem?.title = String(game.movesTaken)
+            gameStateLabel.text = "Moves: " + String(game.movesTaken)
+            gameStateNavBar.topItem?.title = "Moves: " + String(game.movesTaken)
         }
     }
 
