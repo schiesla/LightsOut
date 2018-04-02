@@ -14,53 +14,57 @@ class ViewController: UIViewController {
     @IBOutlet var gameButtons: [UIButton]!
     @IBOutlet weak var gameStateNavBar: UINavigationBar!
     
-    var game = LinearLightsOutGame(numLights: 13)
+    var game = LightsOutObjC()
     
     @IBAction func pressedNewGame(_ sender: Any) {
         print("new game")
-        game = LinearLightsOutGame(numLights: 13)
-        gameStateLabel.text = String(game.moves)
-        gameStateNavBar.topItem?.title = String(game.moves)
-        updateView(game.checkForGameOver())
+        game = LightsOutObjC(numLights: 13)
+        gameStateLabel.text = String(game.movesTaken)
+        gameStateNavBar.topItem?.title = String(game.movesTaken)
+        updateView(game.checkForWin())
     }
     
     @IBAction func pressedGameButton(_ sender: Any) {
-        if (game.gameState == .win) {
+        if (game.gameState.rawValue == 0) {
             return
         } else {
             let gameBoardButton = sender as! UIButton
             print(gameBoardButton.tag);
-            updateView(game.pressedLightAtIndex(gameBoardButton.tag))
+            updateView(game.pressedLight(at: gameBoardButton.tag))
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gameStateLabel.text = String(game.moves)
-        gameStateNavBar.topItem?.title = String(game.moves)
-        updateView(game.checkForGameOver())
+        game = LightsOutObjC(numLights: 13)
+        gameStateLabel.text = String(game.movesTaken)
+        gameStateNavBar.topItem?.title = String(game.movesTaken)
+        updateView(game.checkForWin())
     }
 
     func updateView(_ gameState: Bool) {
         let onImage = #imageLiteral(resourceName: "light_on")
         let offImage = #imageLiteral(resourceName: "light_off")
-        print(game.lightStates)
-        for i in 0..<game.lightStates.count {
+        for i in 0..<game.numLights {
             var button: UIButton
             button = gameButtons[i]
-            switch(game.lightStates[i]) {
-            case true:
+            switch(game.lightStateString(i)) {
+            case "T":
                 button.setImage(onImage, for: UIControlState.normal)
-            case false:
+            case "F":
                 button.setImage(offImage, for: UIControlState.normal)
+            case .none:
+                button = gameButtons[i]
+            case .some(_):
+                button = gameButtons[i]
             }
         }
-        if (game.gameState == .win) {
-            gameStateLabel.text = "You Win, Moves: " + String(game.moves)
-            gameStateNavBar.topItem?.title = "You Win, Moves: " + String(game.moves)
+        if (game.gameState.rawValue == 0) {
+            gameStateLabel.text = "You Win, Moves: " + String(game.movesTaken)
+            gameStateNavBar.topItem?.title = "You Win, Moves: " + String(game.movesTaken)
         } else {
-            gameStateLabel.text = String(game.moves)
-            gameStateNavBar.topItem?.title = String(game.moves)
+            gameStateLabel.text = String(game.movesTaken)
+            gameStateNavBar.topItem?.title = String(game.movesTaken)
         }
     }
 
